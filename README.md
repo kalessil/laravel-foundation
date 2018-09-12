@@ -66,3 +66,14 @@ Route::group(
 ```
 
 Also entities and migrations might need tweaks similar to ones in this package (please reference to source code).
+
+# Nova
+
+It is required to adjust \Mcamara\LaravelLocalization\Middleware\LaravelLocalizationMiddlewareBase class:
+```php
+    protected $except = [
+        '/nova',
+        '/nova/*',
+        '/nova-api/*',
+    ];
+```
